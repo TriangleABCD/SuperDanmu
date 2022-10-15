@@ -2,6 +2,7 @@
 #define DANMUWIDGET_H
 
 #include <QWidget>
+#include <QTcpServer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class danmuWidget; }
@@ -17,5 +18,10 @@ public:
 
 private:
     Ui::danmuWidget *ui;
+
+    bool isConnected;
+
+    QTcpServer* m_server;
+    QTcpSocket* m_tcp;
 };
 #endif // DANMUWIDGET_H
